@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./style/index.css">
+	<title>jogo</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var L = 3 //L = Life deja de olvidarte boludon
+		const Num = 22; //Numero a adivinar, super secreto
+		var NumU = number(prompt("Elije el numero, su vida depende de ello"));
+		//------------------------
+		if (Num === NumU) {
+			alert("Ganaste");
+		}else if (Num < NumU) {
+			L--;
+			alert("no le atinaste maquina, intentalo de nuevo. Vidas restantes: 2. Pista Epica: El numero es menor");
+			
+		}else if (Num > NumU) {
+			alert("no le atinaste maquina, intentalo de nuevo. Vidas restantes: 2. Pista Epica: El numero es mayor");
+			L--;
+		}
+		if (L === 2) {
+			NumU = number(prompt("Intentalo de nuevo"));
+			if (Num === NumU) {
+			alert("Ganaste")
+		}else if (Num < NumU) {
+			L--;
+			alert("no acertaste, intentalo de nuevo. Vidas restantes: 1. Pista Epica: El numero es menor")
+			
+		}else if (Num > NumU) {
+			alert("no acertaste, intentalo de nuevo. Vidas restantes: 1. Pista Epica: El numero es mayor")
+			L--;
+		}
+		}
+		if (L === 1){
+			NumU = number(prompt("Ultimo intento"));
+			if (Num === NumU) {
+				alert("has ganado una galleta")
+			} else if (Num > NumU) {
+				alert("Usted no aprende verdad?")
+				L--;
+			} else {
+				L--;
+				alert("Lmao")
+			}
+		}
+		if (L === 0) {
+			alert("Perdiste");
+		}
+	</script>
+	<div class="page">
+		<h1 class="title">El Jogo</h1>
+		<div class="w">
+			<audio src=".assets/lose.ogg"></audio>
+			<audio src="./assets/lose.ogg" autoplay>hola</audio>
+			<h1>Felicidades</h1>
+			<img src="./assets/win.jpg" width="400px" >
+		</div>
+
+		<span class="or">
+			<h1>O</h1>
+		</span>
+
+		<div class="l">
+			<h1>Intentalo de nuevo</h1>
+			<img src="./assets/lose.jpg" width="400px">
+		</div>
+	</div>
+	<footer class="f">
+		<p>Vos sabras</p>
+	</footer>
+</body>
+</html>
