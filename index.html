@@ -10,9 +10,9 @@
 	<script type="text/javascript">
 		var L = 3 //L = Life deja de olvidarte boludon
 		const Num = 22; //Numero a adivinar, super secreto
-		var NumU = number(prompt("Elije el numero, su vida depende de ello"));
+		let NumU = prompt("Elije el numero, su vida depende de ello");
 		//------------------------
-		if (Num === NumU) {
+		if (Num == NumU) {
 			alert("Ganaste");
 		}else if (Num < NumU) {
 			L--;
@@ -23,8 +23,8 @@
 			L--;
 		}
 		if (L === 2) {
-			NumU = number(prompt("Intentalo de nuevo"));
-			if (Num === NumU) {
+			let NumU = prompt("Intentalo de nuevo");
+			if (Num == NumU) {
 			alert("Ganaste")
 		}else if (Num < NumU) {
 			L--;
@@ -36,8 +36,8 @@
 		}
 		}
 		if (L === 1){
-			NumU = number(prompt("Ultimo intento"));
-			if (Num === NumU) {
+			let = prompt("Ultimo intento");
+			if (Num == NumU) {
 				alert("has ganado una galleta")
 			} else if (Num > NumU) {
 				alert("Usted no aprende verdad?")
